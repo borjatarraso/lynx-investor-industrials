@@ -63,7 +63,7 @@ ICON_VALUATION = "\U0001f4b0"  # money bag
 ICON_PROFIT = "\U0001f4c8"     # chart increasing
 ICON_SOLVENCY = "\U0001f3e6"   # bank
 ICON_GROWTH = "\U0001f680"     # rocket
-ICON_MINING = "\u26cf"         # pickaxe
+ICON_INDUSTRIAL = "\u2699"     # gear
 ICON_SHARES = "\U0001f4ca"     # bar chart
 ICON_VALUE = "\U0001f4a1"      # light bulb
 ICON_FINANCE = "\U0001f4ca"    # bar chart
@@ -164,7 +164,7 @@ class SplashScreen:
 
         # Tagline
         self.tagline = tk.Label(
-            center, text="Junior Mining  &  Basic Materials", font=FONT_SMALL,
+            center, text="Aerospace, Defense, Transportation & Machinery", font=FONT_SMALL,
             bg=BG, fg=FG_DIM,
         )
         self.tagline.pack(pady=(0, 30))
@@ -1699,7 +1699,7 @@ class LynxIndustrialsGUI:
             self._add_metric_row_rel(frame, i, label, value, assessment,
                                      metric_key="", relevance=rel(key) if key else Relevance.RELEVANT)
 
-    # ---- Mining Quality --------------------------------------------------
+    # ---- Industrials Quality --------------------------------------------------
 
     def _render_business_quality(self, r: AnalysisReport) -> None:
         m = r.business_quality
@@ -1707,7 +1707,7 @@ class LynxIndustrialsGUI:
             return
         card = CollapsibleCard(
             self.scroll_frame, "Business Quality Indicators",
-            icon=ICON_MINING, accent=YELLOW, expanded=False,
+            icon=ICON_INDUSTRIAL, accent=YELLOW, expanded=False,
             info_command=lambda: self._show_section_info("business_quality"),
         )
         self._sections.append(card)
@@ -2135,7 +2135,7 @@ class LynxIndustrialsGUI:
             return
 
         card = CollapsibleCard(
-            self.scroll_frame, "Mining Screening Checklist",
+            self.scroll_frame, "Industrials Screening Checklist",
             icon=ICON_SCREENING, accent=TEAL, expanded=False,
             info_command=lambda: self._show_section_info("screening"),
         )

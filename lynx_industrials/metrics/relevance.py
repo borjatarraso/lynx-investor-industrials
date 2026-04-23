@@ -35,7 +35,7 @@ def get_relevance(
     """Look up relevance for a metric given tier and stage.
 
     Stage overrides take precedence over tier-based lookups because
-    the development stage is the primary axis for mining analysis.
+    the development stage is the primary axis for Industrials analysis.
     """
     stage_override = _STAGE_OVERRIDES.get(metric_key, {}).get(stage)
     if stage_override is not None:

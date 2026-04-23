@@ -1,6 +1,6 @@
-"""News fetching for mining companies (shim over :mod:`lynx_investor_core.news`).
+"""News fetching for industrials companies (shim over :mod:`lynx_investor_core.news`).
 
-Pre-binds the mining-specific sector keyword so call sites can invoke
+Pre-binds the industrials-specific sector keyword so call sites can invoke
 ``fetch_all_news(ticker, company_name)`` without passing it every time.
 """
 
